@@ -20,8 +20,10 @@ ts.setup {
     'tsx',
     'lua',
     'json',
-    'css'
+    'css',
   },
+  sync_install = false,
+  auto_install = true,
   autotag = {
     enable = true,
     disable = {},

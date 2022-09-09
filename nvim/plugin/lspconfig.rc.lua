@@ -52,3 +52,10 @@ nvim_lsp.emmet_ls.setup {
   cmd = { "emmet-ls", "--stdio" },
   filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less" },
 }
+
+nvim_lsp.clangd.setup {
+  on_attach = on_attach,
+  cmd = { "clangd" },
+  filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+  single_file_support = true,
+}
