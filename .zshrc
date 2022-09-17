@@ -158,3 +158,7 @@ export PATH=$PATH:/Users/fengjianting/.npm-global/bin
 export PNPM_HOME="/Users/fengjianting/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+# conda
+export PATH="~/opt/miniconda3/bin:$PATH"
+# conda end
