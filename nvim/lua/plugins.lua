@@ -41,5 +41,5 @@ return require('packer').startup(function(use)
   use 'dinhhuy258/git.nvim'
   -- Support for Astro
   use 'wuelnerdotexe/vim-astro'
-
+  use 'themaxmarchuk/tailwindcss-colors.nvim'
 end)
