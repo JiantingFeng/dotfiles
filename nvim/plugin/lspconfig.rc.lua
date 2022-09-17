@@ -10,6 +10,7 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_command [[autocmd BufwritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
     vim.api.nvim_command [[augroup END]]
   end
+  require("tailwindcss-colors").buf_attach(bufnr)
 end
 
 nvim_lsp.ghcide.setup {
@@ -58,4 +59,8 @@ nvim_lsp.clangd.setup {
   cmd = { "clangd" },
   filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
   single_file_support = true,
+}
+
+nvim_lsp.tailwindcss.setup {
+  on_attach = on_attach
 }
