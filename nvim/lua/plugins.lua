@@ -30,13 +30,16 @@ return require('packer').startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
   use 'glepnir/lspsaga.nvim' -- LSP UIs
 
-  use 'lewis6991/gitsigns.nvim'
-  use 'dinhhuy258/git.nvim'
-
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'MunifTanjim/prettier.nvim'
 
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
   use 'rust-lang/rust.vim'
+
+  use 'lewis6991/gitsigns.nvim'
+  use 'dinhhuy258/git.nvim'
+  -- Support for Astro
+  use 'wuelnerdotexe/vim-astro'
+
 end)

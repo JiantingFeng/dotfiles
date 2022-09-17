@@ -44,7 +44,7 @@ nvim_lsp.sumneko_lua.setup {
 nvim_lsp.pyright.setup {
   on_attach = on_attach,
   filetypes = { "purescript" },
-  cmd = { "pyright-language-server", "--stdio" },
+  cmd = { "pyright-langserver", "--stdio" },
 }
 
 nvim_lsp.emmet_ls.setup {
