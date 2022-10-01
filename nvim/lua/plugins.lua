@@ -42,4 +42,6 @@ return require('packer').startup(function(use)
   -- Support for Astro
   use 'wuelnerdotexe/vim-astro'
   use 'themaxmarchuk/tailwindcss-colors.nvim'
+  -- rust
+  use 'rust-lang/rust.vim'
 end)
