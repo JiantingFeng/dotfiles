@@ -1,15 +1,13 @@
 local status, lualine = pcall(require, "lualine")
-local theme           = require("tokyonight.theme")
 if (not status) then return end
 
 lualine.setup {
   options = {
     icons_enabled = true,
-    -- theme = 'neosolarized',
-    theme = 'tokyonight',
+    theme = 'solarized_dark',
     section_separators = { left = '', right = '' },
     component_separators = { left = '', right = '' },
-    disabled_filetypes = {},
+    disabled_filetypes = {}
   },
   sections = {
     lualine_a = { 'mode' },
