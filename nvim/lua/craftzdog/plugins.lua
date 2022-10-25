@@ -48,5 +48,6 @@ packer.startup(function(use)
   use 'folke/tokyonight.nvim'
   -- vimtex
   use 'lervag/vimtex'
-
+  -- autosave
+  use "Pocco81/auto-save.nvim"
 end)
