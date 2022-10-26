@@ -64,4 +64,6 @@ packer.startup(function(use)
   use { 'quarto-dev/quarto-nvim',
     requires = { 'neovim/nvim-lspconfig' }
   } -- quarto
+  use "numToStr/Comment.nvim"
+  use 'JoosepAlviste/nvim-ts-context-commentstring' -- comment string for js, ts, jsx, astro, lua, etc...
 end)
