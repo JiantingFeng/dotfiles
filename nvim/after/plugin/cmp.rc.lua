@@ -1,11 +1,11 @@
 local status, cmp = pcall(require, "cmp")
 if (not status) then return end
-local lspkind = require 'lspkind'
-
+local lspkind = require('lspkind')
+local ls = require('luasnip')
 cmp.setup({
   snippet = {
     expand = function(args)
-      require('luasnip').lsp_expand(args.body)
+      ls.lsp_expand(args.body)
     end,
   },
   mapping = cmp.mapping.preset.insert({
@@ -19,13 +19,15 @@ cmp.setup({
     }),
   }),
   sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-    { name = 'buffer' },
+    { name = 'nvim_lsp', max_item_count = 6 },
+    { name = 'buffer', max_item_count = 6 },
+    { name = 'luasnip' },
   }),
   formatting = {
     format = lspkind.cmp_format({ with_text = false, maxwidth = 50 })
   }
 })
+
 
 vim.cmd [[
   set completeopt=menuone,noinsert,noselect

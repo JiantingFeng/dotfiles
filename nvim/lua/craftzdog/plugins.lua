@@ -48,6 +48,20 @@ packer.startup(function(use)
   use 'folke/tokyonight.nvim'
   -- vimtex
   use 'lervag/vimtex'
+  use {
+    "iurimateus/luasnip-latex-snippets.nvim",
+    -- replace "lervag/vimtex" with "nvim-treesitter/nvim-treesitter" if you're
+    -- using treesitter.
+    requires = { "L3MON4D3/LuaSnip", "lervag/vimtex" },
+    config = function()
+      require 'luasnip-latex-snippets'.setup()
+      -- or setup({ use_treesitter = true })
+    end,
+    ft = "tex",
+  }
   -- autosave
   use "Pocco81/auto-save.nvim"
+  use { 'quarto-dev/quarto-nvim',
+    requires = { 'neovim/nvim-lspconfig' }
+  } -- quarto
 end)
