@@ -66,4 +66,7 @@ packer.startup(function(use)
   } -- quarto
   use "numToStr/Comment.nvim"
   use 'JoosepAlviste/nvim-ts-context-commentstring' -- comment string for js, ts, jsx, astro, lua, etc...
+  use { "akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("toggleterm").setup()
+  end } -- floating term
 end)
