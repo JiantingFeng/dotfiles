@@ -1,3 +1,5 @@
+-- This is Jianting's nvim configuration entry point
+-- For latest config, please refer https://github.com/JiantingFeng/dotfiles
 require('base')
 require('highlights')
 require('maps')

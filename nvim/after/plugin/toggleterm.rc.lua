@@ -4,7 +4,7 @@ require("toggleterm").setup {
   shell = vim.o.shell,
   float_opts = {
     border = 'curved',
-    width = vim.o.columns * 0.8,
+    width = math.ceil(vim.o.columns * 0.8),
   }
 }
 print(vim.o.shell)
