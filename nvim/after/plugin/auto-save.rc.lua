@@ -5,4 +5,5 @@ if (not status) then return end
 vim.api.nvim_set_keymap("n", "<leader>n", ":ASToggle<CR>", {})
 
 autosave.setup({
+  enabled = false,
 })
