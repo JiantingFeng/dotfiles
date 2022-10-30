@@ -61,12 +61,14 @@ packer.startup(function(use)
   }
   -- autosave
   use "Pocco81/auto-save.nvim"
-  use { 'quarto-dev/quarto-nvim',
-    requires = { 'neovim/nvim-lspconfig' }
-  } -- quarto
   use "numToStr/Comment.nvim"
   use 'JoosepAlviste/nvim-ts-context-commentstring' -- comment string for js, ts, jsx, astro, lua, etc...
   use { "akinsho/toggleterm.nvim", tag = '*', config = function()
     require("toggleterm").setup()
   end } -- floating term
+  -- rust
+  use 'simrat39/rust-tools.nvim'
+
+  -- Rust Debugging
+  use 'mfussenegger/nvim-dap'
 end)
