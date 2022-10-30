@@ -59,8 +59,6 @@ packer.startup(function(use)
     end,
     ft = "tex",
   }
-  -- autosave
-  use "Pocco81/auto-save.nvim"
   use "numToStr/Comment.nvim"
   use 'JoosepAlviste/nvim-ts-context-commentstring' -- comment string for js, ts, jsx, astro, lua, etc...
   use { "akinsho/toggleterm.nvim", tag = '*', config = function()
