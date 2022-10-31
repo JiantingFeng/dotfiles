@@ -14,12 +14,15 @@ end
 
 null_ls.setup {
   sources = {
+    null_ls.builtins.completion.luasnip,
     null_ls.builtins.formatting.prettierd,
     null_ls.builtins.formatting.rustfmt,
+    null_ls.builtins.completion.spell,
     null_ls.builtins.diagnostics.eslint_d.with({
       diagnostics_format = '[eslint] #{m}\n(#{c})'
     }),
-    null_ls.builtins.diagnostics.fish
+    null_ls.builtins.formatting.stylish_haskell
+    -- null_ls.builtins.diagnostics.fish
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then

@@ -3,7 +3,7 @@ require("toggleterm").setup {
   open_mapping = [[<c-\>]],
   shell = vim.o.shell,
   float_opts = {
-    border = 'curved',
+    border = 'double',
     width = math.ceil(vim.o.columns * 0.8),
   }
 }
