@@ -19,6 +19,7 @@ null_ls.setup {
     null_ls.builtins.diagnostics.solhint,
     null_ls.builtins.formatting.prettierd,
     null_ls.builtins.formatting.rustfmt,
+    null_ls.builtins.formatting.golines,
     null_ls.builtins.diagnostics.eslint.with({
       diagnostics_format = '[eslint] #{m}\n(#{c})'
     }),
