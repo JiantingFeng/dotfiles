@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/Users/fengjianting/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/Users/fengjianting/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/fengjianting/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -93,11 +98,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/fengjianting/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
-  },
-  ["colorbuddy.nvim"] = {
-    loaded = true,
-    path = "/Users/fengjianting/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
-    url = "https://github.com/tjdevries/colorbuddy.nvim"
   },
   ["git.nvim"] = {
     loaded = true,
@@ -146,11 +146,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/fengjianting/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
-  },
-  ["neosolarized.nvim"] = {
-    loaded = true,
-    path = "/Users/fengjianting/.local/share/nvim/site/pack/packer/start/neosolarized.nvim",
-    url = "https://github.com/svrana/neosolarized.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -237,11 +232,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/fengjianting/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
-  },
-  ["tokyonight.nvim"] = {
-    loaded = true,
-    path = "/Users/fengjianting/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
   },
   vimtex = {
     loaded = true,
