@@ -16,13 +16,13 @@ null_ls.setup {
   offset_encoding = "utf-8",
   sources = {
     null_ls.builtins.completion.luasnip,
-    null_ls.builtins.diagnostics.solhint,
     null_ls.builtins.formatting.prettierd,
     null_ls.builtins.formatting.rustfmt,
     null_ls.builtins.formatting.golines,
     null_ls.builtins.diagnostics.eslint.with({
       diagnostics_format = '[eslint] #{m}\n(#{c})'
     }),
+    null_ls.builtins.diagnostics.pylint,
     null_ls.builtins.diagnostics.flake8,
     null_ls.builtins.diagnostics.pycodestyle,
     null_ls.builtins.formatting.autopep8,
