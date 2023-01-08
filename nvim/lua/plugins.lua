@@ -75,8 +75,6 @@ packer.startup(function(use)
   use { "akinsho/toggleterm.nvim", tag = '*', config = function()
     require("toggleterm").setup()
   end } -- floating term
-  -- rust
-  use 'simrat39/rust-tools.nvim'
 
   -- Rust Debugging
   use 'mfussenegger/nvim-dap'
