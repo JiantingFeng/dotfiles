@@ -1,24 +1,14 @@
-local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
+-- Install packer
+local install_path = vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+local is_bootstarp = false
+if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
+  is_bootstarp = true
+  vim.fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
+  vim.cmd [[packadd packer.nvim]]
 end
 
-local status, packer = pcall(require, "packer")
-local packer_bootstrap = ensure_packer()
-
-vim.cmd [[packadd packer.nvim]]
-
-packer.startup(function(use)
+require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  if packer_bootstrap then
-    require('packer').sync()
-  end
   -- use {
   --   'svrana/neosolarized.nvim',
   --   requires = { 'tjdevries/colorbuddy.nvim' }
