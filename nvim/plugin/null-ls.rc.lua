@@ -15,7 +15,6 @@ end
 null_ls.setup {
   offset_encoding = "utf-8",
   sources = {
-    null_ls.builtins.completion.luasnip,
     null_ls.builtins.formatting.prettierd,
     null_ls.builtins.formatting.rustfmt,
     null_ls.builtins.formatting.golines,
