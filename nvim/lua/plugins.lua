@@ -13,7 +13,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-  'wbthomason/packer.nvim',
   { "catppuccin/nvim", as = "catppuccin" },
   -- Statusline
   'nvim-lualine/lualine.nvim',
@@ -73,5 +72,8 @@ require('lazy').setup({
 
   -- Rust Debugging
   'mfussenegger/nvim-dap',
-  'codota/tabnine-nvim',
+  {
+    'codota/tabnine-nvim',
+    build = './dl_binaries.sh'
+  }
 })

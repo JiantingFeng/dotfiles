@@ -23,6 +23,7 @@ cmp.setup({
     { name = 'buffer' },
     { name = 'copilot' },
     { name = 'luasnip' },
+    { name = 'tabnine' },
   }),
   formatting = {
     format = lspkind.cmp_format({ with_text = true, maxwidth = 50 })
