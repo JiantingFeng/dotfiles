@@ -73,4 +73,5 @@ require('lazy').setup({
 
   -- Rust Debugging
   'mfussenegger/nvim-dap',
+  'codota/tabnine-nvim',
 })
