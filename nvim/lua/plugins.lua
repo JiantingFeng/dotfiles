@@ -24,7 +24,7 @@ require('lazy').setup({
   'hrsh7th/nvim-cmp', -- Completion
   'neovim/nvim-lspconfig', -- LSP
   'jose-elias-alvarez/null-ls.nvim', -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
-  'williamboman/mason.nvim',
+  'williamboman/mason.nvim', -- Install Lsp
   'williamboman/mason-lspconfig.nvim',
 
   -- 'glepnir/lspsaga.nvim', -- LSP UIs
@@ -33,7 +33,6 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     build = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   },
-  'kyazdani42/nvim-web-devicons', -- File icons
   'nvim-telescope/telescope.nvim',
   'nvim-telescope/telescope-file-browser.nvim',
   'windwp/nvim-autopairs',
@@ -44,7 +43,10 @@ require('lazy').setup({
     "iamcco/markdown-preview.nvim",
     build = function() vim.fn["mkdp#util#install"]() end,
   },
-  'akinsho/nvim-bufferline.lua',
+  {
+    'akinsho/nvim-bufferline.lua',
+    dependencies = { 'kyazdani42/nvim-web-devicons' },
+  },
   --  'github/copilot.vim'
 
   'lewis6991/gitsigns.nvim',
@@ -65,7 +67,7 @@ require('lazy').setup({
   "numToStr/Comment.nvim",
   'JoosepAlviste/nvim-ts-context-commentstring', -- comment string for js, ts, jsx, astro, lua, etc...
   {
-    "akinsho/toggleterm.nvim", tag = '*', config = function()
+    "akinsho/toggleterm.nvim", config = function()
       require("toggleterm").setup()
     end
   }, -- floating term
