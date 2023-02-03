@@ -1,5 +1,9 @@
 local keymap = vim.keymap
 
+-- Set leader
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 keymap.set('n', 'x', '"_x')
 
 -- Increment/decrement
