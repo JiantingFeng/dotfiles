@@ -77,5 +77,10 @@ require('lazy').setup({
   {
     'codota/tabnine-nvim',
     build = './dl_binaries.sh'
+  },
+  -- Diagnostics and Debugging
+  {
+    'folke/trouble.nvim',
+    dependencies = { 'kyazdani42/nvim-web-devicons' }
   }
 })
