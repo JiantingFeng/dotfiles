@@ -7,4 +7,3 @@ require("toggleterm").setup {
     width = math.ceil(vim.o.columns * 0.8),
   }
 }
-print(vim.o.shell)
