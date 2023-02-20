@@ -44,5 +44,6 @@
         "/Users/fengjianting/.config/nvim/after",
         "/Users/fengjianting/.local/state/nvim/lazy/readme",
         "${3rd}/luassert/library"
-    ]
+    ],
+    "workspace.checkThirdParty": false
 }
