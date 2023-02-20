@@ -23,6 +23,7 @@ require('lazy').setup({
     'hrsh7th/cmp-buffer', -- nvim-cmp source for buffer words
     'hrsh7th/cmp-nvim-lsp', -- nvim-cmp source for neovim's built-in LSP
     'hrsh7th/nvim-cmp', -- Completion
+    'L3MON4D3/LuaSnip',
     'neovim/nvim-lspconfig', -- LSP
     'jose-elias-alvarez/null-ls.nvim', -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
     'williamboman/mason.nvim', -- Install Lsp

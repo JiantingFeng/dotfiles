@@ -1,7 +1,13 @@
 local status, cmp = pcall(require, "cmp")
 if (not status) then return end
 local lspkind = require('lspkind')
+local ls = require('luasnip')
 cmp.setup({
+  snippet = {
+      expand = function(args)
+        ls.lsp_expand(args.body)
+      end,
+    },
   mapping = cmp.mapping.preset.insert({
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
