@@ -29,7 +29,6 @@ require('lazy').setup({
     'williamboman/mason-lspconfig.nvim',
 
     -- 'glepnir/lspsaga.nvim', -- LSP UIs
-    'L3MON4D3/LuaSnip',
     {
         'nvim-treesitter/nvim-treesitter',
         build = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
@@ -40,11 +39,7 @@ require('lazy').setup({
     'windwp/nvim-ts-autotag',
     'norcalli/nvim-colorizer.lua',
     'folke/zen-mode.nvim',
-    {
-        "iamcco/markdown-preview.nvim",
-        build = function() vim.fn["mkdp#util#install"]() end,
-    },
-    {
+       {
         'akinsho/nvim-bufferline.lua',
         dependencies = { 'kyazdani42/nvim-web-devicons' },
     },
@@ -52,24 +47,11 @@ require('lazy').setup({
 
     'lewis6991/gitsigns.nvim',
     'dinhhuy258/git.nvim', -- For git blame & browse
-    -- vimtex
-    'lervag/vimtex',
-    {
-        "iurimateus/luasnip-latex-snippets.nvim",
-        -- replace "lervag/vimtex" with "nvim-treesitter/nvim-treesitter" if you're
-        -- using treesitter.
-        dependencies = { "L3MON4D3/LuaSnip", "lervag/vimtex" },
-        config = function()
-          require 'luasnip-latex-snippets'.setup()
-          -- or setup({ _treesitter = true })
-        end,
-        ft = "tex",
-    },
-    "numToStr/Comment.nvim",
+    'numToStr/Comment.nvim',
     'JoosepAlviste/nvim-ts-context-commentstring', -- comment string for js, ts, jsx, astro, lua, etc...
     {
         "akinsho/toggleterm.nvim", config = function()
-      require("toggleterm").setup()
+        require("toggleterm").setup()
     end
     }, -- floating term
 
@@ -89,7 +71,7 @@ require('lazy').setup({
         "folke/which-key.nvim",
         config = function()
           vim.o.timeout = true
-          vim.o.timeoutlen = 200
+          vim.o.timeoutlen = 400
         end,
     },
 
