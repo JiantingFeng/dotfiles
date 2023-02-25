@@ -19,3 +19,5 @@ set -x HOMEBREW_PIP_INDEX_URL "https://pypi.tuna.tsinghua.edu.cn/simple"
 
 # Set rust path
 set PATH $HOME/.cargo/bin $PATH
+
+status --is-interactive; and rbenv init - fish | source
