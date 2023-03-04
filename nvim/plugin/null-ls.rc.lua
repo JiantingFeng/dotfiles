@@ -21,9 +21,9 @@ null_ls.setup {
     null_ls.builtins.diagnostics.eslint.with({
       diagnostics_format = '[eslint] #{m}\n(#{c})'
     }),
-    null_ls.builtins.diagnostics.pylint,
+    -- null_ls.builtins.diagnostics.pylint,
     null_ls.builtins.diagnostics.flake8,
-    null_ls.builtins.diagnostics.pycodestyle,
+    -- null_ls.builtins.diagnostics.pycodestyle,
     null_ls.builtins.formatting.autopep8,
     null_ls.builtins.formatting.stylish_haskell,
     null_ls.builtins.formatting.clang_format
