@@ -130,7 +130,16 @@ nvim_lsp.astro.setup {
 
 nvim_lsp.rust_analyzer.setup {
     on_attach = on_attach,
-    capabilities = capabilities
+    capabilities = capabilities,
+    settings = {
+    ["rust_analyzer"] = {
+      diagnostics = {
+        enable = true,
+        disabled = {"unresolved-proc-macro"},
+        enableExperimental = true,
+      }
+    }
+  }
 }
 
 nvim_lsp.texlab.setup {
