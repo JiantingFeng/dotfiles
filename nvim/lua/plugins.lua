@@ -45,7 +45,7 @@ require('lazy').setup({
         dependencies = { 'kyazdani42/nvim-web-devicons' },
     },
     --  'github/copilot.vim'
-
+    'simrat39/rust-tools.nvim', -- rust tool
     'lewis6991/gitsigns.nvim',
     'dinhhuy258/git.nvim', -- For git blame & browse
     'numToStr/Comment.nvim',
