@@ -20,6 +20,7 @@ require('lazy').setup({
     -- Common utilities
     'nvim-lua/plenary.nvim',
     'onsails/lspkind-nvim', -- vscode-like pictograms
+    "glepnir/lspsaga.nvim",
     'hrsh7th/cmp-buffer', -- nvim-cmp source for buffer words
     'hrsh7th/cmp-nvim-lsp', -- nvim-cmp source for neovim's built-in LSP
     'hrsh7th/nvim-cmp', -- Completion
@@ -29,7 +30,6 @@ require('lazy').setup({
     'williamboman/mason.nvim', -- Install Lsp
     'williamboman/mason-lspconfig.nvim',
 
-    -- 'glepnir/lspsaga.nvim', -- LSP UIs
     {
         'nvim-treesitter/nvim-treesitter',
         build = function() require('nvim-treesitter.install').update({ with_sync = true }) end,

@@ -4,7 +4,6 @@ local status, nvim_lsp = pcall(require, "lspconfig")
 if (not status) then return end
 
 local protocol = require('vim.lsp.protocol')
-
 local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
 local enable_format_on_save = function(_, bufnr)
   vim.api.nvim_clear_autocmds({ group = augroup_format, buffer = bufnr })
@@ -33,7 +32,7 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
   --buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-  --buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  -- buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
 end
 
 protocol.CompletionItemKind = {
@@ -82,7 +81,7 @@ nvim_lsp.tsserver.setup {
 
 nvim_lsp.sourcekit.setup {
     on_attach = on_attach,
-    capabilities = capabilities,
+   capabilities = capabilities,
 }
 
 nvim_lsp.clangd.setup {
@@ -153,11 +152,6 @@ nvim_lsp.pyright.setup {
 }
 
 nvim_lsp.hls.setup {
-    on_attach = on_attach,
-    capabilities = capabilities
-}
-
-nvim_lsp.solidity.setup {
     on_attach = on_attach,
     capabilities = capabilities
 }
