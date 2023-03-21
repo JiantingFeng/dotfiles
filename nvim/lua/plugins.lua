@@ -29,7 +29,7 @@ require('lazy').setup({
     'jose-elias-alvarez/null-ls.nvim', -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
     'williamboman/mason.nvim', -- Install Lsp
     'williamboman/mason-lspconfig.nvim',
-
+    'nvim-tree/nvim-tree.lua',
     {
         'nvim-treesitter/nvim-treesitter',
         build = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
@@ -40,7 +40,7 @@ require('lazy').setup({
     'windwp/nvim-ts-autotag',
     'norcalli/nvim-colorizer.lua',
     'folke/zen-mode.nvim',
-       {
+    {
         'akinsho/nvim-bufferline.lua',
         dependencies = { 'kyazdani42/nvim-web-devicons' },
     },
