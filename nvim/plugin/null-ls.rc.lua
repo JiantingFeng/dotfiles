@@ -3,15 +3,6 @@ if (not status) then return end
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
-local lsp_formatting = function(bufnr)
-  vim.lsp.buf.format({
-    filter = function(client)
-      return client.name == "null-ls"
-    end,
-    bufnr = bufnr,
-  })
-end
-
 null_ls.setup {
   offset_encoding = "utf-8",
   sources = {
@@ -21,22 +12,25 @@ null_ls.setup {
     null_ls.builtins.diagnostics.eslint.with({
       diagnostics_format = '[eslint] #{m}\n(#{c})'
     }),
-    -- null_ls.builtins.diagnostics.pylint,
     null_ls.builtins.diagnostics.flake8,
-    -- null_ls.builtins.diagnostics.pycodestyle,
-    null_ls.builtins.formatting.autopep8,
+    null_ls.builtins.formatting.blue,
     null_ls.builtins.formatting.stylish_haskell,
     null_ls.builtins.formatting.clang_format
     -- null_ls.builtins.diagnostics.fish
   },
-  oh_attach = function(client, bufnr)
+  on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
       vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
       vim.api.nvim_create_autocmd("BufWritePre", {
         group = augroup,
         buffer = bufnr,
         callback = function()
-          lsp_formatting(bufnr)
+          vim.lsp.buf.format({
+            bufnr = bufnr,
+            filter = function(client)
+                return client.name == "null-ls"
+            end
+    })
         end,
       })
     end
