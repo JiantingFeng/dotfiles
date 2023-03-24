@@ -74,7 +74,10 @@ nvim_lsp.sourcekit.setup {
 
 nvim_lsp.clangd.setup {
     on_attach = on_attach,
-    capabilities = capabilities
+    capabilities = capabilities,
+    filetypes = {
+    "c", "cpp", "h", "hpp", "objc", "objcpp", "cuda", "proto"
+  }
 }
 
 nvim_lsp.lua_ls.setup {
