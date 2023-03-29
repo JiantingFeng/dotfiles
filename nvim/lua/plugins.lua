@@ -58,10 +58,6 @@ require('lazy').setup({
 
     -- Rust Debugging
     'mfussenegger/nvim-dap',
-    {
-        'codota/tabnine-nvim',
-        build = './dl_binaries.sh'
-    },
     -- Diagnostics and Debugging
     {
         'folke/trouble.nvim',
