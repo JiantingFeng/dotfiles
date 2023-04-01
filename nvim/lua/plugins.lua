@@ -71,5 +71,8 @@ require('lazy').setup({
           vim.o.timeoutlen = 400
         end,
     },
-
+    {
+      'scalameta/nvim-metals',
+      dependencies = {'nvim-lua/plenary.nvim'}
+    },
 })
