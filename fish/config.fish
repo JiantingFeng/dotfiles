@@ -23,3 +23,6 @@ set PATH $HOME/.cargo/bin $PATH
 status --is-interactive; and rbenv init - fish | source
 
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /Users/fengjianting/.ghcup/bin # ghcup-env
+# >>> coursier install directory >>>
+export PATH="$PATH:/Users/fengjianting/Library/Application Support/Coursier/bin"
+# <<< coursier install directory <<<
