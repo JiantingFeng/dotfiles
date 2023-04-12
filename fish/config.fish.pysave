@@ -26,7 +26,3 @@ set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; se
 # >>> coursier install directory >>>
 export PATH="$PATH:/Users/fengjianting/Library/Application Support/Coursier/bin"
 # <<< coursier install directory <<<
-
-# Setting PATH for Python 3.11
-# The original version is saved in /Users/fengjianting/.config/fish/config.fish.pysave
-set -x PATH "/Library/Frameworks/Python.framework/Versions/3.11/bin" "$PATH"
