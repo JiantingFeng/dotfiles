@@ -1,15 +1,20 @@
--- This is Jianting's nvim configuration entry point
--- For latest config, please refer https://github.com/JiantingFeng/dotfiles
-require('base')
-require('highlights')
-require('maps')
-require('plugins')
-require("luasnip.loaders.from_lua").lazy_load({
-    paths = "~/.config/nvim/LuaSnip/"
-})
-local has = vim.fn.has
-local is_mac = has "macunix"
-local is_win = has "win32"
+if vim.loader then vim.loader.enable() end -- enable vim.loader early if available
 
-if is_mac then require('macos') end
-if is_win then require('windows') end
+for _, source in ipairs {
+  "astronvim.bootstrap",
+  "astronvim.options",
+  "astronvim.lazy",
+  "astronvim.autocmds",
+  "astronvim.mappings",
+} do
+  local status_ok, fault = pcall(require, source)
+  if not status_ok then vim.api.nvim_err_writeln("Failed to load " .. source .. "\n\n" .. fault) end
+end
+
+if astronvim.default_colorscheme then
+  if not pcall(vim.cmd.colorscheme, astronvim.default_colorscheme) then
+    require("astronvim.utils").notify("Error setting up colorscheme: " .. astronvim.default_colorscheme, "error")
+  end
+end
+
+require("astronvim.utils").conditional_func(astronvim.user_opts("polish", nil, false), true)
