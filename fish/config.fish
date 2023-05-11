@@ -30,3 +30,6 @@ export PATH="$PATH:/Users/fengjianting/Library/Application Support/Coursier/bin"
 # Setting PATH for Python 3.11
 # The original version is saved in /Users/fengjianting/.config/fish/config.fish.pysave
 set -x PATH "/Library/Frameworks/Python.framework/Versions/3.11/bin" "$PATH"
+
+# opam configuration
+source /Users/fengjianting/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
