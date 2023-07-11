@@ -26,3 +26,10 @@ set -x PATH "/Library/Frameworks/Python.framework/Versions/3.11/bin" "$PATH"
 
 # opam configuration
 source /Users/fengjianting/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+
+# pnpm
+set -gx PNPM_HOME "/Users/fengjianting/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
