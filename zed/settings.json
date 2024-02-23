@@ -7,7 +7,8 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-    "theme": "One Light",
+    "vim_mode": true,
+    "theme": "Atelier Cave Light",
     "buffer_font_size": 15,
     "buffer_font_family": "JetBrains Mono",
     "terminal": {
