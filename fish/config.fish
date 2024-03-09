@@ -33,3 +33,5 @@ if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+# Created by `pipx` on 2024-03-06 15:14:26
+set PATH $PATH /Users/fengjianting/.local/bin
